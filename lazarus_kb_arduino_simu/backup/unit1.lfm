@@ -1,0 +1,2578 @@
+object Form1: TForm1
+  Left = 275
+  Height = 666
+  Top = 48
+  Width = 1159
+  Caption = 'Simu Keybox Arduino Hispano @ Christophe Derenne 2025'
+  ClientHeight = 666
+  ClientWidth = 1159
+  OnCreate = FormCreate
+  Position = poScreenCenter
+  LCLVersion = '3.8.0.0'
+  object PanelTop: TPanel
+    Left = 0
+    Height = 50
+    Top = 0
+    Width = 1159
+    Align = alTop
+    ClientHeight = 50
+    ClientWidth = 1159
+    TabOrder = 0
+    object LabelPort: TLabel
+      Left = 9
+      Height = 19
+      Top = 17
+      Width = 27
+      Caption = 'Port'
+      ParentColor = False
+    end
+    object EditPort: TEdit
+      Left = 38
+      Height = 36
+      Top = 6
+      Width = 51
+      Alignment = taRightJustify
+      TabOrder = 0
+      Text = '4925'
+    end
+    object ShapeStatut: TShape
+      Left = 98
+      Height = 24
+      Top = 13
+      Width = 24
+      Brush.Color = clRed
+      Shape = stCircle
+    end
+    object ButtonStartStop: TButton
+      Left = 303
+      Height = 29
+      Top = 11
+      Width = 59
+      Caption = 'Start'
+      TabOrder = 1
+      OnClick = ButtonStartStopClick
+    end
+    object StaticTextData: TStaticText
+      Left = 376
+      Height = 17
+      Top = 18
+      Width = 319
+      TabOrder = 2
+    end
+    object LabelPort1: TLabel
+      Left = 141
+      Height = 19
+      Top = 17
+      Width = 51
+      Caption = 'Timeout'
+      ParentColor = False
+    end
+    object ComboBoxTimeout: TComboBox
+      Left = 208
+      Height = 29
+      Top = 12
+      Width = 74
+      ItemHeight = 0
+      ItemIndex = 3
+      Items.Strings = (
+        '25'
+        '50'
+        '75'
+        '100'
+        '125'
+        '150'
+        '175'
+        '200'
+      )
+      Style = csDropDownList
+      TabOrder = 3
+      Text = '100'
+    end
+  end
+  object PanelLig2: TPanel
+    Left = 0
+    Height = 78
+    Top = 128
+    Width = 1159
+    Align = alTop
+    ClientHeight = 78
+    ClientWidth = 1159
+    TabOrder = 2
+    object GroupBoxK9: TGroupBox
+      Left = 1
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 9'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 0
+      object ButtonPrendreK9: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK9: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK9: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK10: TGroupBox
+      Left = 145
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 10'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 1
+      object ButtonPrendreK10: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK10: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK10: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK11: TGroupBox
+      Left = 289
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 11'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 2
+      object ButtonPrendreK11: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK11: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK11: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK12: TGroupBox
+      Left = 433
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 12'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 3
+      object ButtonPrendreK12: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK12: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK12: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK13: TGroupBox
+      Left = 577
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 13'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 4
+      object ButtonPrendreK13: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK13: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK13: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK14: TGroupBox
+      Left = 721
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 14'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 5
+      object ButtonPrendreK14: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK14: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK14: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK15: TGroupBox
+      Left = 865
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 15'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 6
+      object ButtonPrendreK15: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK15: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK15: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK16: TGroupBox
+      Left = 1009
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 16'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 7
+      object ButtonPrendreK16: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK16: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK16: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+  end
+  object PanelLig3: TPanel
+    Left = 0
+    Height = 78
+    Top = 206
+    Width = 1159
+    Align = alTop
+    ClientHeight = 78
+    ClientWidth = 1159
+    TabOrder = 3
+    object GroupBoxK17: TGroupBox
+      Left = 1
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 17'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 0
+      object ButtonPrendreK17: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+        OnClick = ButtonPrendreClick
+      end
+      object ButtonRemetreK17: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+        OnClick = ButtonRemetreClick
+      end
+      object ShapeLedK17: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        OnChangeBounds = ShapeLedK1ChangeBounds
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK18: TGroupBox
+      Left = 145
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 18'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 1
+      object ButtonPrendreK18: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK18: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK18: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK19: TGroupBox
+      Left = 289
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 19'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 2
+      object ButtonPrendreK19: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK19: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK19: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK20: TGroupBox
+      Left = 433
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 20'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 3
+      object ButtonPrendreK20: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK20: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK20: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK21: TGroupBox
+      Left = 577
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 21'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 4
+      object ButtonPrendreK21: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK21: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK21: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK22: TGroupBox
+      Left = 721
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 22'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 5
+      object ButtonPrendreK22: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK22: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK22: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK23: TGroupBox
+      Left = 865
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 23'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 6
+      object ButtonPrendreK23: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK23: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK23: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK24: TGroupBox
+      Left = 1009
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 24'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 7
+      object ButtonPrendreK24: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK24: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK24: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+  end
+  object PanelLig4: TPanel
+    Left = 0
+    Height = 78
+    Top = 284
+    Width = 1159
+    Align = alTop
+    ClientHeight = 78
+    ClientWidth = 1159
+    TabOrder = 4
+    object GroupBoxK25: TGroupBox
+      Left = 1
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 25'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 0
+      object ButtonPrendreK25: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+        OnClick = ButtonPrendreClick
+      end
+      object ButtonRemetreK25: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+        OnClick = ButtonRemetreClick
+      end
+      object ShapeLedK25: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        OnChangeBounds = ShapeLedK1ChangeBounds
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK26: TGroupBox
+      Left = 145
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 26'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 1
+      object ButtonPrendreK26: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK26: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK26: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK27: TGroupBox
+      Left = 289
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 27'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 2
+      object ButtonPrendreK27: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK27: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK27: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK28: TGroupBox
+      Left = 433
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 28'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 3
+      object ButtonPrendreK28: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK28: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK28: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK29: TGroupBox
+      Left = 577
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 29'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 4
+      object ButtonPrendreK29: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK29: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK29: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK30: TGroupBox
+      Left = 721
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 30'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 5
+      object ButtonPrendreK30: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK30: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK30: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK31: TGroupBox
+      Left = 865
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 31'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 6
+      object ButtonPrendreK31: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK31: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK31: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK32: TGroupBox
+      Left = 1009
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 32'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 7
+      object ButtonPrendreK32: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK32: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK32: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+  end
+  object PanelLig1: TPanel
+    Left = 0
+    Height = 78
+    Top = 50
+    Width = 1159
+    Align = alTop
+    ClientHeight = 78
+    ClientWidth = 1159
+    TabOrder = 1
+    object GroupBoxK1: TGroupBox
+      Left = 1
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 1'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 0
+      object ButtonPrendreK1: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+        OnClick = ButtonPrendreClick
+      end
+      object ButtonRemetreK1: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+        OnClick = ButtonRemetreClick
+      end
+      object ShapeLedK1: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        OnChangeBounds = ShapeLedK1ChangeBounds
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK2: TGroupBox
+      Left = 145
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 2'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 1
+      object ButtonPrendreK2: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK2: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK2: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK3: TGroupBox
+      Left = 289
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 3'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 2
+      object ButtonPrendreK3: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK3: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK3: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK4: TGroupBox
+      Left = 433
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 4'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 3
+      object ButtonPrendreK4: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK4: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK4: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK5: TGroupBox
+      Left = 577
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 5'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 4
+      object ButtonPrendreK5: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK5: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK5: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK6: TGroupBox
+      Left = 721
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 6'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 5
+      object ButtonPrendreK6: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK6: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK6: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK7: TGroupBox
+      Left = 865
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 7'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 6
+      object ButtonPrendreK7: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK7: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK7: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK8: TGroupBox
+      Left = 1009
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 8'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 7
+      object ButtonPrendreK8: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK8: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK8: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+  end
+  object PanelLig5: TPanel
+    Left = 0
+    Height = 78
+    Top = 362
+    Width = 1159
+    Align = alTop
+    ClientHeight = 78
+    ClientWidth = 1159
+    TabOrder = 5
+    object GroupBoxK33: TGroupBox
+      Left = 1
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 33'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 0
+      object ButtonPrendreK33: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+        OnClick = ButtonPrendreClick
+      end
+      object ButtonRemetreK33: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+        OnClick = ButtonRemetreClick
+      end
+      object ShapeLedK33: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        OnChangeBounds = ShapeLedK1ChangeBounds
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK34: TGroupBox
+      Left = 145
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 34'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 1
+      object ButtonPrendreK34: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK34: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK34: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK35: TGroupBox
+      Left = 289
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 35'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 2
+      object ButtonPrendreK35: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK35: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK35: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK36: TGroupBox
+      Left = 433
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 36'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 3
+      object ButtonPrendreK36: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK36: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK36: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK37: TGroupBox
+      Left = 577
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 37'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 4
+      object ButtonPrendreK37: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK37: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK37: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK38: TGroupBox
+      Left = 721
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 38'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 5
+      object ButtonPrendreK38: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK38: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK38: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK39: TGroupBox
+      Left = 865
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 39'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 6
+      object ButtonPrendreK39: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK39: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK39: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK40: TGroupBox
+      Left = 1009
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 40'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 7
+      object ButtonPrendreK40: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK40: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK40: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+  end
+  object PanelLig6: TPanel
+    Left = 0
+    Height = 78
+    Top = 440
+    Width = 1159
+    Align = alTop
+    ClientHeight = 78
+    ClientWidth = 1159
+    TabOrder = 6
+    object GroupBoxK41: TGroupBox
+      Left = 1
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 41'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 0
+      object ButtonPrendreK41: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+        OnClick = ButtonPrendreClick
+      end
+      object ButtonRemetreK41: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+        OnClick = ButtonRemetreClick
+      end
+      object ShapeLedK41: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        OnChangeBounds = ShapeLedK1ChangeBounds
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK42: TGroupBox
+      Left = 145
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 42'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 1
+      object ButtonPrendreK42: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK42: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK42: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK43: TGroupBox
+      Left = 289
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 43'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 2
+      object ButtonPrendreK43: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK43: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK43: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK44: TGroupBox
+      Left = 433
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 44'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 3
+      object ButtonPrendreK44: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK44: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK44: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK45: TGroupBox
+      Left = 577
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 45'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 4
+      object ButtonPrendreK45: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK45: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK45: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK46: TGroupBox
+      Left = 721
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 46'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 5
+      object ButtonPrendreK46: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK46: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK46: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK47: TGroupBox
+      Left = 865
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 47'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 6
+      object ButtonPrendreK47: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK47: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK47: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK48: TGroupBox
+      Left = 1009
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 48'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 7
+      object ButtonPrendreK48: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK48: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK48: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+  end
+  object PanelLig7: TPanel
+    Left = 0
+    Height = 78
+    Top = 518
+    Width = 1159
+    Align = alTop
+    ClientHeight = 78
+    ClientWidth = 1159
+    TabOrder = 7
+    object GroupBoxK49: TGroupBox
+      Left = 1
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 49'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 0
+      object ButtonPrendreK49: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+        OnClick = ButtonPrendreClick
+      end
+      object ButtonRemetreK49: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+        OnClick = ButtonRemetreClick
+      end
+      object ShapeLedK49: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        OnChangeBounds = ShapeLedK1ChangeBounds
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK50: TGroupBox
+      Left = 145
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 50'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 1
+      object ButtonPrendreK50: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK50: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK50: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK51: TGroupBox
+      Left = 289
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 51'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 2
+      object ButtonPrendreK51: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK51: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK51: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK52: TGroupBox
+      Left = 433
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 52'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 3
+      object ButtonPrendreK52: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK52: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK52: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK53: TGroupBox
+      Left = 577
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 53'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 4
+      object ButtonPrendreK53: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK53: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK53: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK54: TGroupBox
+      Left = 721
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 54'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 5
+      object ButtonPrendreK54: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK54: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK54: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK55: TGroupBox
+      Left = 865
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 55'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 6
+      object ButtonPrendreK55: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK55: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK55: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK56: TGroupBox
+      Left = 1009
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 56'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 7
+      object ButtonPrendreK56: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK56: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK56: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+  end
+  object PanelLig8: TPanel
+    Left = 0
+    Height = 78
+    Top = 588
+    Width = 1159
+    Align = alBottom
+    ClientHeight = 78
+    ClientWidth = 1159
+    TabOrder = 8
+    object GroupBoxK57: TGroupBox
+      Left = 1
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 57'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 0
+      object ButtonPrendreK57: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+        OnClick = ButtonPrendreClick
+      end
+      object ButtonRemetreK57: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+        OnClick = ButtonRemetreClick
+      end
+      object ShapeLedK57: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        OnChangeBounds = ShapeLedK1ChangeBounds
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK58: TGroupBox
+      Left = 145
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 58'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 1
+      object ButtonPrendreK58: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK58: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK58: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK59: TGroupBox
+      Left = 289
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 59'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 2
+      object ButtonPrendreK59: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK59: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK59: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK60: TGroupBox
+      Left = 433
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 60'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 3
+      object ButtonPrendreK60: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK60: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK60: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK61: TGroupBox
+      Left = 577
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 61'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 4
+      object ButtonPrendreK61: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK61: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK61: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK62: TGroupBox
+      Left = 721
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 62'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 5
+      object ButtonPrendreK62: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK62: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK62: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK63: TGroupBox
+      Left = 865
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 63'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 6
+      object ButtonPrendreK63: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK63: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK63: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+    object GroupBoxK64: TGroupBox
+      Left = 1009
+      Height = 76
+      Top = 1
+      Width = 144
+      Align = alLeft
+      Caption = 'Clé 64'
+      ClientHeight = 56
+      ClientWidth = 142
+      TabOrder = 7
+      object ButtonPrendreK64: TButton
+        Left = 10
+        Height = 25
+        Top = 2
+        Width = 75
+        Caption = 'Prendre'
+        Enabled = False
+        TabOrder = 0
+      end
+      object ButtonRemetreK64: TButton
+        Left = 10
+        Height = 25
+        Top = 30
+        Width = 75
+        Caption = 'Remettre'
+        Enabled = False
+        TabOrder = 1
+      end
+      object ShapeLedK64: TShape
+        Left = 96
+        Height = 24
+        Top = 13
+        Width = 24
+        Brush.Color = clRed
+        Shape = stCircle
+      end
+    end
+  end
+  object IdTCPServer1: TIdTCPServer
+    Bindings = <    
+      item
+        IP = '0.0.0.0'
+        Port = 4925
+      end>
+    DefaultPort = 4925
+    TerminateWaitTime = 50
+    OnExecute = IdTCPServer1Execute
+    Left = 269
+    Top = 13
+  end
+  object Timer1: TTimer
+    OnTimer = Timer1Timer
+    Left = 816
+    Top = 8
+  end
+end

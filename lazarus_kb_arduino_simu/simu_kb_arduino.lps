@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <ProjectSession>
+    <PathDelim Value="\"/>
+    <Version Value="12"/>
+    <BuildModes Active="Default"/>
+    <Units>
+      <Unit>
+        <Filename Value="simu_kb_arduino.lpr"/>
+        <IsPartOfProject Value="True"/>
+        <IsVisibleTab Value="True"/>
+        <CursorPos X="49" Y="10"/>
+        <UsageCount Value="46"/>
+        <Loaded Value="True"/>
+      </Unit>
+      <Unit>
+        <Filename Value="unit1.pas"/>
+        <IsPartOfProject Value="True"/>
+        <ComponentName Value="Form1"/>
+        <HasResources Value="True"/>
+        <ResourceBaseClass Value="Form"/>
+        <UnitName Value="Unit1"/>
+        <EditorIndex Value="-1"/>
+        <WindowIndex Value="-1"/>
+        <TopLine Value="10"/>
+        <CursorPos X="11" Y="10"/>
+        <UsageCount Value="46"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\Core\IdSocketHandle.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="543"/>
+        <CursorPos X="49" Y="552"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\Core\IdTCPServer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="32"/>
+        <CursorPos Y="49"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\Core\IdIOHandler.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2118"/>
+        <CursorPos Y="2130"/>
+        <UsageCount Value="12"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\fpc\3.2.2\source\rtl\objpas\classes\classesh.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="287"/>
+        <CursorPos X="3" Y="298"/>
+        <UsageCount Value="11"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\Core\IdCustomTCPServer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="543"/>
+        <CursorPos Y="562"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\lcl\include\control.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="2949"/>
+        <CursorPos Y="2961"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\lcl\include\buttoncontrol.inc"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos Y="22"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\lcl\include\buttons.inc"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="159"/>
+        <CursorPos Y="170"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\Core\IdBuffer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="350"/>
+        <CursorPos X="15" Y="343"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\System\IdGlobal.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="965"/>
+        <CursorPos X="3" Y="976"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\Core\IdContext.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="178"/>
+        <CursorPos Y="189"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\Core\IdTask.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="122"/>
+        <CursorPos Y="137"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\components\Indy-master\Lib\Core\IdThread.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="465"/>
+        <CursorPos X="38" Y="485"/>
+        <UsageCount Value="11"/>
+        <DefaultSyntaxHighlighter Value="Delphi"/>
+      </Unit>
+      <Unit>
+        <Filename Value="C:\Users\cdere\Downloads\ControlTimer (1)\simpletimer.pas"/>
+        <EditorIndex Value="-1"/>
+        <TopLine Value="27"/>
+        <CursorPos X="26" Y="49"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="d:\lcl\customtimer.pas"/>
+        <UnitName Value="CustomTimer"/>
+        <EditorIndex Value="-1"/>
+        <CursorPos X="30" Y="14"/>
+        <UsageCount Value="10"/>
+      </Unit>
+      <Unit>
+        <Filename Value="simpletimer.pas"/>
+        <UnitName Value="SimpleTimer"/>
+        <EditorIndex Value="-1"/>
+        <UsageCount Value="20"/>
+      </Unit>
+    </Units>
+    <JumpHistory HistoryIndex="-1"/>
+    <RunParams>
+      <FormatVersion Value="2"/>
+      <Modes ActiveMode=""/>
+    </RunParams>
+  </ProjectSession>
+</CONFIG>

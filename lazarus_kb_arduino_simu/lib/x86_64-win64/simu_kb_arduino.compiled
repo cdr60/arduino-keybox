@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Compiler Value="d:\lazarus\fpc\3.2.2\bin\x86_64-win64\fpc.exe" Date="1513316847"/>
+  <Params Value=" -MObjFPC -Scghi -O1 -gw2 -godwarfsets -gl -WG -l -vewnhibq -Fid:\projects\lazarus_kb_arduino_simu\lib\x86_64-win64 -FuC:\Users\cdere\AppData\Local\lazarus\onlinepackagemanager\packages\Indy10\lib\x86_64-win64 -FuX:\download\Lazarus\controltimer\ControlTimer\lib\x86_64-win64 -Fud:\lazarus\components\ideintf\units\x86_64-win64\win32 -Fud:\lazarus\components\lazcontrols\lib\x86_64-win64\win32 -Fud:\lazarus\lcl\units\x86_64-win64\win32 -Fud:\lazarus\lcl\units\x86_64-win64 -Fud:\lazarus\components\freetype\lib\x86_64-win64 -Fud:\lazarus\components\buildintf\units\x86_64-win64 -Fud:\lazarus\components\lazutils\lib\x86_64-win64 -Fud:\lazarus\packager\units\x86_64-win64 -Fud:\projects\lazarus_kb_arduino_simu\ -FUd:\projects\lazarus_kb_arduino_simu\lib\x86_64-win64\ -FEd:\projects\lazarus_kb_arduino_simu\ -od:\projects\lazarus_kb_arduino_simu\simu_kb_arduino.exe -dLCL -dLCLwin32 simu_kb_arduino.lpr"/>
+</CONFIG>

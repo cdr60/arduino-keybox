@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Lazarus Version="3.8"/>
+  <Compiler Value="/usr/bin/fpc" Date="1722038400"/>
+  <Params Value=" -MObjFPC -Sch -Cg -g -gl -l -vewnhibq -Fu/usr/lib64/lazarus/packager/units/x86_64-linux -Fu/usr/lib64/lazarus/components/lazutils/lib/x86_64-linux -Fu/usr/lib64/lazarus/components/buildintf/units/x86_64-linux -Fu/usr/lib64/lazarus/components/freetype/lib/x86_64-linux -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux -Fu/usr/lib64/lazarus/lcl/units/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/lazcontrols/lib/x86_64-linux/gtk2 -Fu/usr/lib64/lazarus/components/ideintf/units/x86_64-linux/gtk2 -Fu/home/cderenne/Téléchargements/controltimer/ControlTimer/ -FU/home/cderenne/Téléchargements/controltimer/ControlTimer/lib/x86_64-linux/ -dLCL -dLCLgtk2 -dnoDEBUG controltimer.pas"/>
+</CONFIG>
