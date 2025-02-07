@@ -9,7 +9,7 @@
   TESTS LED :
   ROUGE = 27,25,23 
   VERTE = 26,24,22
-  35,34 = TEST LECTECEUR SD
+  35,34 = TEST LECTEUR SD
   33,32 = TEST FICHIER PARAML / CARTE SD
   31,30 = ETHERNET OK
   CHECK I2C STATUS 
@@ -19,7 +19,7 @@
 ****************************************************/
 
 
-long impulseduration=100;
+uint16_t  impulseduration=100;
 
  bool startloop =0;
  byte led_init_ko[] = {27,25,23};
@@ -47,7 +47,7 @@ byte led_mcp_ok[] = {29,31,33,35,37,39,41,43};
 // forcage possible par fichier ini
 byte mac[] = {  0x00, 0x12, 0x34, 0x56, 0x78, 0x9A  };
 //port TCPIP forçable par fichier ini
-int port = 4925;
+uint16_t port = 4925;
 
 #include <Adafruit_MCP23X17.h>
 #include <SPI.h>
@@ -303,7 +303,7 @@ void Read_IniParam()
         if (ini.getValue(sectName, "port", buffer, bufferLen)) 
         { 
           Serial.print(" port ");
-          int auxport=atoi(buffer);
+          uint16_t auxport=atol(buffer);
           if ((auxport>1000) and (auxport<65353)) port=auxport;
           else Serial.print(" port incorrect : min 1001, max 65355 ");
           Serial.print(port);
@@ -323,9 +323,9 @@ void Read_IniParam()
         if (ini.getValue(sectName, "impulse", buffer, bufferLen)) 
         { 
           Serial.print(" impulse ");
-          int auximpulse=atoi(buffer);
-          if ((auximpulse>=0) and (auximpulse<=60000)) impulseduration=auximpulse;
-          else Serial.print(" impulse incorrect : min 20, max 60000 ");
+          uint16_t auximpulse=atol(buffer);
+          if ((auximpulse>=20) and (auximpulse<=65535)) impulseduration=auximpulse;
+          else Serial.print(" impulse incorrect : min 20, max 65535 ");
           Serial.print(impulseduration);
           Serial.print(" -- ");
         } else
@@ -779,6 +779,20 @@ void SendStatusKey(byte cmd1, byte cmd2)
 }
 /*********************************************/
 
+
+/*********************************************/
+/* Evoyer la valeur de l'impulseduration     */
+/*********************************************/
+void SendParam(byte cmd1, byte cmd2)
+{
+    char byte_status[10]={cmd1,cmd2,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
+    byte_status[3]=impulseduration % 256;
+    byte_status[4]=(impulseduration - (impulseduration % 256)) / 256;
+    for (byte i=0;i<10;i++){ Serial.print("0x");   Serial.print(byte_status[ i ], HEX); Serial.print(" "); }
+    for (byte i=0;i<10;i++) server.write(byte_status[i]);
+}
+/*********************************************/
+
 void EtherServer()
 {
   char byte_array[3];
@@ -820,6 +834,15 @@ void EtherServer()
             {
                 Serial.println("Demande de statut");
                 SendStatusKey(byte_array[0],byte_array[1]);
+                /*deconnecter le client*/
+                delay(1);
+                Serial.println("Sortie");
+                client.stop();
+            }
+            else if ((byte_array[1]==0x03) and ((byte_array[2]==0x00) or (byte_array[2]==0xFF)))
+            {
+                Serial.println("Demande de paramètres");
+                SendParam(byte_array[0],byte_array[1]);
                 /*deconnecter le client*/
                 delay(1);
                 Serial.println("Sortie");
