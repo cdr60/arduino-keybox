@@ -781,13 +781,13 @@ void SendStatusKey(byte cmd1, byte cmd2)
 
 
 /*********************************************/
-/* Evoyer la valeur de l'impulseduration     */
+/* Evoyer la valeur de l'impulseduration :  */
 /*********************************************/
 void SendParam(byte cmd1, byte cmd2)
 {
     char byte_status[10]={cmd1,cmd2,0x00,0x00,0x00,0x00,0x00,0x00,0x00,0x00};
     byte_status[3]=impulseduration % 256;
-    byte_status[4]=(impulseduration - (impulseduration % 256)) / 256;
+    byte_status[2]=(impulseduration - (impulseduration % 256)) / 256;
     for (byte i=0;i<10;i++){ Serial.print("0x");   Serial.print(byte_status[ i ], HEX); Serial.print(" "); }
     for (byte i=0;i<10;i++) server.write(byte_status[i]);
 }
